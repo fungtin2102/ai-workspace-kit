@@ -1,0 +1,47 @@
+---
+description: Memory Bank protocol for cross-tool and cross-session project state
+alwaysApply: true
+---
+
+# Memory Bank Protocol
+
+The root `memory-bank/` is the single source of truth for project state across Codex, Cursor, Cline, Kiro, and other AI tools.
+
+## Before Starting Work
+
+Before any non-trivial task, read all six core files:
+
+1. `memory-bank/projectbrief.md`
+2. `memory-bank/productContext.md`
+3. `memory-bank/systemPatterns.md`
+4. `memory-bank/techContext.md`
+5. `memory-bank/activeContext.md`
+6. `memory-bank/progress.md`
+
+Suggested reading order:
+
+```text
+projectbrief -> productContext + systemPatterns + techContext -> activeContext -> progress
+```
+
+If files are missing, create them using `.cursor/rules/init-memory-bank.md`.
+
+## After Work
+
+Update Memory Bank when:
+- A substantive feature, fix, or architecture decision is completed.
+- A new technical constraint, pitfall, or cross-module contract is discovered.
+- The user explicitly asks to update memory.
+- Current focus, next steps, or blockers change.
+
+Prioritize:
+- `memory-bank/activeContext.md`
+- `memory-bank/progress.md`
+- `memory-bank/module-<MODULE_NAME>-status.md`
+
+## Directory Responsibilities
+
+- `memory-bank/`: current facts, state, progress, and risks.
+- `.cursor/rules/`, `.clinerules/`, and `AGENTS.md`: how AI tools should act.
+- `dev-doc/`: cross-module contracts, draft designs, and interface agreements.
+- Formal docs: reviewed, stable, deliverable documentation.

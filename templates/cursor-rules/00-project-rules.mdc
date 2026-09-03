@@ -1,0 +1,32 @@
+---
+description: General rules for complex multi-module projects
+alwaysApply: true
+---
+
+# General Multi-Module Project Rules
+
+## Language And Output
+
+- Use English by default.
+- Before editing code, confirm the module boundary and Memory Bank state.
+- When uncertain, record assumptions and make the smallest verifiable change.
+
+## Module Boundaries
+
+- The root repository owns orchestration, rules, state, cross-module contracts, and submodule pointers.
+- Module sessions edit only their own module by default.
+- Cross-module API, field, event, database, or configuration changes must be written to `dev-doc/` first.
+- If another module must coordinate, update the corresponding `memory-bank/module-<MODULE_NAME>-status.md`.
+
+## Forbidden Behavior
+
+- Do not read directories listed as forbidden in root `AGENTS.md`.
+- Do not use archived history as implementation reference.
+- Do not mix multiple long-running tasks in one unisolated working tree.
+- Do not bypass the existing stack or established module patterns.
+
+## Git
+
+- Use a dedicated branch or worktree for large tasks.
+- Suggested branch names: `codex/<task-slug>`, `cursor/<task-slug>`, `cline/<task-slug>`, `kiro/<task-slug>`.
+- Check root and submodule status before committing.

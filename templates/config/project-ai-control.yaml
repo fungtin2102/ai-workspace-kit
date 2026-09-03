@@ -1,0 +1,58 @@
+# AI complex project control config.
+# Copy to the target root project as `.ai-control.yaml` and fill real values.
+
+root:
+  name: "<ROOT_PROJECT>"
+  description: "<ROOT_PROJECT_DESCRIPTION>"
+  path: "<ROOT_PROJECT_PATH>"
+  git_url: "<ROOT_GIT_URL>"
+  branch: "<ROOT_BRANCH>"
+  memory_bank: "memory-bank"
+  dev_doc: "dev-doc"
+
+tools:
+  codex:
+    root_rules: "AGENTS.md"
+    module_rules: "AGENTS.md"
+  cursor:
+    rules: ".cursor/rules"
+  cline:
+    rules: ".clinerules"
+  kiro:
+    rules: ".kiro"
+  shared_roles:
+    rules: ".ai-rules/roles"
+
+ignore:
+  forbidden_read:
+    - "archive/"
+    - "legacy/"
+  generated:
+    - "node_modules/"
+    - "dist/"
+    - "build/"
+    - "target/"
+    - ".venv/"
+
+modules:
+  - name: "<MODULE_NAME>"
+    path: "<MODULE_PATH>"
+    git_url: "<MODULE_GIT_URL>"
+    branch: "<MODULE_BRANCH>"
+    description: "<MODULE_DESCRIPTION>"
+    standalone_sessions: true
+    status_file: "memory-bank/module-<MODULE_NAME>-status.md"
+    dev_command: "<MODULE_DEV_COMMAND>"
+    test_command: "<MODULE_TEST_COMMAND>"
+    build_command: "<MODULE_BUILD_COMMAND>"
+    roles:
+      - "@dev"
+      - "@qa"
+
+worktree:
+  base_dir: "../worktrees"
+  branch_prefixes:
+    codex: "codex/"
+    cursor: "cursor/"
+    cline: "cline/"
+    kiro: "kiro/"

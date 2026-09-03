@@ -1,0 +1,10 @@
+[submodule "<MODULE_A>"]
+	path = <MODULE_A_PATH>
+	url = <MODULE_A_GIT_URL>
+	branch = <MODULE_A_BRANCH>
+
+[submodule "<MODULE_B>"]
+	path = <MODULE_B_PATH>
+	url = <MODULE_B_GIT_URL>
+	branch = <MODULE_B_BRANCH>
+

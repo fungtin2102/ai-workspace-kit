@@ -1,0 +1,19 @@
+# Historical or deprecated code
+archive/
+legacy/
+
+# Dependencies and generated artifacts
+node_modules/
+dist/
+build/
+target/
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+
+# Large runtime outputs
+logs/
+tmp/
+*.log
+

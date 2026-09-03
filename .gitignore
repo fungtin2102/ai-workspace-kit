@@ -1,0 +1,45 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor and workspace metadata
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs and temporary files
+*.log
+logs/
+tmp/
+temp/
+.tmp/
+
+# Dependency directories
+node_modules/
+.venv/
+venv/
+env/
+
+# Build outputs
+dist/
+build/
+out/
+target/
+coverage/
+
+# Caches
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+__pycache__/
+*.py[cod]
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Keep template files tracked even when they are dotfile examples.
+!templates/**

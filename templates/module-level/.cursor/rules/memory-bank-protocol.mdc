@@ -1,0 +1,25 @@
+---
+description: Module Memory Bank protocol
+alwaysApply: true
+---
+
+# Module Memory Bank Protocol
+
+Before starting work, read the root project's `memory-bank/` core files.
+
+Default root location:
+- `../memory-bank/`
+
+If this module is an independent clone and the default path does not exist, ask the user for the root project path or ask them to add the root project to the workspace. Do not create a second `memory-bank/` inside the module.
+
+Required files:
+- `<ROOT_PROJECT_PATH>/memory-bank/projectbrief.md`
+- `<ROOT_PROJECT_PATH>/memory-bank/productContext.md`
+- `<ROOT_PROJECT_PATH>/memory-bank/systemPatterns.md`
+- `<ROOT_PROJECT_PATH>/memory-bank/techContext.md`
+- `<ROOT_PROJECT_PATH>/memory-bank/activeContext.md`
+- `<ROOT_PROJECT_PATH>/memory-bank/progress.md`
+- `<ROOT_PROJECT_PATH>/memory-bank/module-<MODULE_NAME>-status.md`
+
+After work:
+- Update root `memory-bank/module-<MODULE_NAME>-status.md`.

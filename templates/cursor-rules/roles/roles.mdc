@@ -1,0 +1,33 @@
+---
+description: AI role entry point: @architect @pm @dev @algorithm @uiux @agent @qa
+alwaysApply: true
+---
+
+# AI Role Rules
+
+Role source files live in:
+
+```text
+templates/roles/
+```
+
+In a target project, copy them to:
+
+```text
+.ai-rules/roles/
+```
+
+When the user explicitly uses one of these triggers, follow that role:
+- `@architect`
+- `@pm`
+- `@dev`
+- `@algorithm`
+- `@uiux`
+- `@agent`
+- `@qa`
+
+Common requirements:
+- Read root `memory-bank/` before starting work.
+- Read module `AGENTS.md` for module tasks.
+- Write cross-module changes to root `dev-doc/` first.
+- Update root `memory-bank/` after substantive work.

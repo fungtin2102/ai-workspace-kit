@@ -1,0 +1,32 @@
+---
+description: Standalone module development rules
+alwaysApply: true
+---
+
+# Standalone Module Development Rules
+
+The current directory is the `<MODULE_NAME>` module.
+
+## Context
+
+Required root context:
+- `../AGENTS.md`
+- `../memory-bank/`
+- `../dev-doc/`
+
+If `../memory-bank/` does not exist, ask the user for the root project path or ask them to add the root project to the workspace. Do not create a second `memory-bank/` inside the module.
+
+## Boundaries
+
+- Edit only this module by default.
+- Write cross-module changes to root contract documents first.
+- Update the module status file in the root Memory Bank after substantive work.
+- Do not read excluded directories, archived history, or generated artifacts.
+
+## Status File
+
+Preferred:
+- `../memory-bank/module-<MODULE_NAME>-status.md`
+
+Standalone clone:
+- `<ROOT_PROJECT_PATH>/memory-bank/module-<MODULE_NAME>-status.md`

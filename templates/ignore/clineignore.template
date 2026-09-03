@@ -1,0 +1,10 @@
+archive/
+legacy/
+node_modules/
+dist/
+build/
+target/
+.venv/
+logs/
+tmp/
+
